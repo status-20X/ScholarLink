@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Login (){
@@ -21,7 +22,7 @@ export default function Login (){
             <button className=" w-[200px] self-center bg-[#38B593] hover:bg-[#38D593] text-white font-bold py-2 px-4 rounded-full h-12">
               LOGIN
             </button>
-            <h2 className="self-center">Not a member? <span className="text-blue-700 cursor-pointer">SignUp</span></h2>
+            <h2 className="self-center">Not a member? <Link href="../Register"><span className="text-blue-700 cursor-pointer">SignUp</span></Link></h2>
           </div>
         </div>
       </div>

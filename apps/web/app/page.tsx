@@ -1,13 +1,14 @@
 import "tailwindcss/tailwind.css";
 import "./globals.css";
-import Login from './Component/Login/login'
-import Register from './Component/Register/Register'
-import Aadhar from './Component/Aadhar/Aadhar'
-import OTP from './Component/Aadhar/OTP'
+import Login from './Login/page'
+import Register from "./Register/page";
+// import Register from './Component/Register/Register'
+// import Aadhar from './Component/Aadhar/Aadhar'
+// import OTP from './Component/Aadhar/OTP'
 const Home = () => (
   <>
-    <Login/>
-    {/* <Register/> */}
+    {/* <Login/> */}
+    <Register/>
     {/* <Aadhar/> */}
     {/* <OTP/> */}
   </>
