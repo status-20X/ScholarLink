@@ -2,7 +2,7 @@
 import "tailwindcss/tailwind.css";
 import React , {useEffect , useState} from 'react'
 
-const Grievance = () => {
+const Application = () => {
   const [Schemes, SetSchemes] = useState([{name:"empty"}]);
   useEffect(() => {
     SetSchemes([
@@ -69,4 +69,4 @@ const Grievance = () => {
   )
 }
 
-export default Grievance
+export default Application
