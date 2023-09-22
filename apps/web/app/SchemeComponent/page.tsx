@@ -5,15 +5,15 @@ import Link from "next/link";
 
 const page = (element) => {
   return (
-    <div className="rounded-3xl bg-[#06a67e] p-5">
+    <div className="rounded-3xl bg-[#06a67e] p-5 m-5">
         <h5 className="mb-2 text-2xl font-normal tracking-tight text-gray-900 dark:text-black">
-          {element.name}
+          {element.element.name}
         </h5>
         <h5 className="mb-2 text-2xl font-normal tracking-tight text-gray-900 dark:text-white">
-           {element.about}
+           {element.element.about}
         </h5>
         <p className="font-normal text-xl text-white dark:text-white-400">
-          {element.state}
+          {element.element.state}
         </p>
         <button type="button" className="bg-gray-800 text-white rounded-r-md py-2 border-l border-gray-200 hover:bg-red-700 hover:text-white px-3">
       <div className="flex flex-row align-middle">
