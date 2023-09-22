@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Scheme from "../Scheme/page";
+import Dashboard from "../DashBoard/page";
 import Greviance from "../Greviance/page";
 import Application from "../Application/page";
 const Navbar = () => {
@@ -94,12 +95,8 @@ const Navbar = () => {
             </ul>
           </div>
         </aside>
-      <div className="mainPage" style={{marginLeft:'250px'}}>
-        {/* <Dashboard /> */}
-        <Scheme   />
-        {/* <CheckStatus/> */}
-        <Greviance />
-        <Application />
+      <div className="mainPage ml-[25vw]">
+        <Scheme />
         </div>
       </div>
     </>
