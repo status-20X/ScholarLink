@@ -1,5 +1,5 @@
 "use client"
-import I from '../dp.png'
+import I from '../dp.jpg'
 import React from 'react'
 import "tailwindcss/tailwind.css";
 import {useEffect , useState} from 'react'
