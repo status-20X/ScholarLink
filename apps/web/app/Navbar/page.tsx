@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Scheme from "../Scheme/page";
+import Dashboard from "../DashBoard/page";
 const Navbar = () => {
   return (
     <>
@@ -92,7 +93,7 @@ const Navbar = () => {
           </div>
         </aside>
       <div className="mainPage ml-[25vw]">
-        <Scheme />
+        <Dashboard/>
         </div>
       </div>
     </>
