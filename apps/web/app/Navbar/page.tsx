@@ -1,10 +1,17 @@
+"use client"
 import Link from "next/link";
-import React from "react";
+import React, { useState,useEffect } from "react";
 import Scheme from "../Scheme/page";
 import Dashboard from "../DashBoard/page";
 import Greviance from "../Greviance/page";
 import Application from "../Application/page";
+import Register from "../Register/page";
 const Navbar = () => {
+  const [comp,setComp] = useState(<Dashboard/>);
+  // useEffect(() => {
+    
+  // }, [comp])
+  
   return (
     <>
       <div className="flex flex-row">
@@ -15,7 +22,7 @@ const Navbar = () => {
           aria-label="Sidebar"
         >
           <div className="h-screen px-3 py-4 overflow-y-auto bg-[#06A67E]">
-            <Link href="#" className="flex items-center pl-8 pt-2 mb-5">
+            <Link href="#" onClick={()=>{setComp(<Dashboard/>)}} className="flex items-center pl-8 pt-2 mb-5">
               <span className="self-center text-3xl font-semibold whitespace-nowrap dark:text-white ">
                 Scholar Link
               </span>
@@ -26,7 +33,7 @@ const Navbar = () => {
             <ul className="space-y-2 font-medium flex flex-col">
               <li className="">
                 <Link
-                  href="#"
+                  href="#" onClick={()=>{setComp(<Dashboard/>)}}
                   className="flex pl-12 items-center p-2 text-center  text-gray-900 rounded-lg dark:text-black hover:scale-110 hover:shadow-lg dark:hover:shadow-black/30 group underline"
                 >
                   <svg
@@ -44,7 +51,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#" onClick={()=>{setComp(<Scheme/>)}}
                   className="flex items-center p-2 text-center text-gray-900 rounded-lg dark:text-black  hover:scale-110 hover:shadow-lg dark:hover:shadow-black/30 group"
                 >
                   <span className="flex-1 ml-3 whitespace-nowrap underline">
@@ -55,6 +62,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="#"
+                  //  onClick={()=>{setComp(<Status/>)}}
                   className="flex items-center p-2 text-center text-gray-900 rounded-lg dark:text-black hover:scale-110 hover:shadow-lg dark:hover:shadow-black/30group"
                 >
                   <span className="flex-1 ml-3 whitespace-nowrap underline">
@@ -64,7 +72,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#" onClick={()=>{setComp(<Application/>)}}
                   className="flex items-center p-2 text-center text-gray-900 rounded-lg dark:text-black hover:scale-110 hover:shadow-lg dark:hover:shadow-black/30 group"
                 >
                   <span className="flex-1 ml-3 whitespace-nowrap  underline">
@@ -74,7 +82,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#" onClick={()=>{setComp(<Greviance/>)}}
                   className="flex items-center p-2 text-center text-gray-900 rounded-lg dark:text-black hover:scale-110 hover:shadow-lg dark:hover:shadow-black/30 group"
                 >
                   <span className="flex-1 ml-3 whitespace-nowrap underline">
@@ -84,7 +92,7 @@ const Navbar = () => {
               </li>
               <li className="item-end">
                 <Link
-                  href="#"
+                  href='/Login'
                   className="flex items-center p-2 text-center text-gray-900 rounded-lg dark:text-black hover:scale-110 hover:shadow-lg dark:hover:shadow-black/30 group"
                 >
                   <span className="flex-1 ml-3 whitespace-nowrap underline content-end">
@@ -96,11 +104,7 @@ const Navbar = () => {
           </div>
         </aside>
       <div className="mainPage ml-[25vw]">
-        <Dashboard />
-        <Scheme />
-        {/* <Status /> */}
-        <Greviance />
-        <Application />
+        {comp}
         </div>
       </div>
     </>
