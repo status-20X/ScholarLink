@@ -4,7 +4,7 @@ import Scheme from "../Scheme/page";
 const Navbar = () => {
   return (
     <>
-      <div className="flex flex-col">
+      <div className="flex flex-row">
         <aside
           id="logo-sidebar"
           className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
@@ -91,7 +91,7 @@ const Navbar = () => {
             </ul>
           </div>
         </aside>
-        <div className="mainPage">
+      <div className="mainPage ml-[25vw]">
         <Scheme />
         </div>
       </div>
