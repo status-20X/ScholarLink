@@ -3,6 +3,7 @@ import React from "react";
 import Scheme from "../Scheme/page";
 import Greviance from "../Greviance/page";
 import Application from "../Application/page";
+import DashBoard from "../DashBoard/page";
 const Navbar = () => {
   return (
     <>
@@ -25,7 +26,7 @@ const Navbar = () => {
             <ul className="space-y-2 font-medium flex flex-col">
               <li className="">
                 <Link
-                  href="/dashboard"
+                  href="#"
                   className="flex pl-12 items-center p-2 text-center  text-gray-900 rounded-lg dark:text-black hover:scale-110 hover:shadow-lg dark:hover:shadow-black/30 group underline"
                 >
                   <svg
@@ -95,7 +96,7 @@ const Navbar = () => {
           </div>
         </aside>
       <div className="mainPage" style={{marginLeft:'250px'}}>
-        {/* <Dashboard /> */}
+        <DashBoard />
         <Scheme   />
         {/* <CheckStatus/> */}
         <Greviance />
