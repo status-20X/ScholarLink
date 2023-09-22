@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Login (){
@@ -27,11 +28,7 @@ export default function Login (){
             }}>
               LOGIN
             </button>
-            <h2 className="self-center" style={{
-              fontFamily:'Montserrat'
-            }}>Not a member? <span className="text-blue-700 cursor-pointer" style={{
-              fontFamily:'montserrat'
-            }}>SignUp</span></h2>
+            <h2 className="self-center">Not a member? <Link href="../Register"><span className="text-blue-700 cursor-pointer">SignUp</span></Link></h2>
           </div>
         </div>
       </div>

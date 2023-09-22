@@ -1,6 +1,16 @@
+"use client"
 import React from 'react'
+import { useRouter } from 'next/navigation'
 
-export default function Register (){
+export default function Otp (){
+  const router = useRouter()
+  const handleVerify = () => {
+    //BACHODI KAR LENA YHA
+    router.push('/Navbar');
+  }
+  const handleSend = () => {
+
+  }
   return (
     <div className="w-screen h-screen flex justify-center bg-[#F0F9F3]">
       <div className="container flex flex-row h-[80%] self-center shadow-lg rounded-md">
@@ -15,11 +25,12 @@ export default function Register (){
           <div className="form flex flex-col justify-center self-center gap-y-2">
             <h1 className="heading self-center text-5xl font-bold text-[#38B593]" style={{
               fontFamily:'Montserrat'
-            }}>Verify Aadhar</h1>
-            <input className="self-center w-[400px] h-[60px] placeholder:p-3" type="number" placeholder="Aadhar"/>
-            <button className=" w-[200px] self-center bg-[#38B593] hover:bg-[#38D593] text-white font-bold py-2 px-4 rounded-full h-12">
-              Genrate OTP
+            }}>Verify OTP</h1>
+            <input className="self-center w-[400px] h-[60px] placeholder:p-3" type="number" placeholder="OTP"/>
+            <button onClick={handleVerify} className=" w-[200px] self-center bg-[#38B593] hover:bg-[#38D593] text-white font-bold py-2 px-4 rounded-full h-12">
+              Verify
             </button>
+            <h2 className="self-center">Not received? <span className="text-blue-700 cursor-pointer" onClick={handleSend}>Resend</span></h2>
           </div>
         </div>
       </div>
