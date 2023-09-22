@@ -9,7 +9,7 @@ import Grievance from "./Greviance/page";
 const Home = () => (
   <>
     {/* <Login/> */}
-    <Grievance/>
+    <Register/>
     {/* <Aadhar/> */}
     {/* <OTP/> */}
   </>
