@@ -1,0 +1,126 @@
+{
+    "schemes": [
+      {
+        "name": "Education Scholarship",
+        "state": "Karnataka",
+        "certificates_required": [
+          "Xth Certificate",
+          "XIIth Certificate",
+          "Undergraduate Degree Certificate"
+        ]
+      },
+      {
+        "name": "Skill Development Program",
+        "state": "Maharashtra",
+        "certificates_required": [
+          "Xth Certificate",
+          "XIIth Certificate"
+        ]
+      },
+      {
+        "name": "Women Empowerment Scheme",
+        "state": "Rajasthan",
+        "certificates_required": [
+          "XIIth Certificate",
+          "Undergraduate Degree Certificate"
+        ]
+      },
+      {
+        "name": "Agricultural Subsidy",
+        "state": "Punjab",
+        "certificates_required": [
+          "Xth Certificate"
+        ]
+      },
+      {
+        "name": "Healthcare Support",
+        "state": "Uttar Pradesh",
+        "certificates_required": [
+          "Xth Certificate",
+          "XIIth Certificate",
+          "Medical Degree Certificate"
+        ]
+      },
+      {
+        "name": "Entrepreneurship Grant",
+        "state": "Gujarat",
+        "certificates_required": [
+          "XIIth Certificate",
+          "Business Plan Approval"
+        ]
+      },
+      {
+        "name": "Housing Assistance",
+        "state": "Tamil Nadu",
+        "certificates_required": [
+          "Xth Certificate",
+          "Property Ownership Certificate"
+        ]
+      },
+      {
+        "name": "Elderly Care Program",
+        "state": "Madhya Pradesh",
+        "certificates_required": [
+          "XIIth Certificate",
+          "Medical Fitness Certificate"
+        ]
+      },
+      {
+        "name": "Environmental Conservation",
+        "state": "Kerala",
+        "certificates_required": [
+          "XIIth Certificate",
+          "Environmental Impact Study"
+        ]
+      },
+      {
+        "name": "Youth Sports Development",
+        "state": "Haryana",
+        "certificates_required": [
+          "Xth Certificate",
+          "Sports Achievement Certificate"
+        ]
+      },
+      {
+        "name": "Rural Employment Scheme",
+        "state": "Bihar",
+        "certificates_required": [
+          "Xth Certificate",
+          "Residence Proof"
+        ]
+      },
+      {
+        "name": "Digital Literacy Program",
+        "state": "West Bengal",
+        "certificates_required": [
+          "Xth Certificate",
+          "Computer Course Completion Certificate"
+        ]
+      },
+      {
+        "name": "Cultural Heritage Preservation",
+        "state": "Odisha",
+        "certificates_required": [
+          "XIIth Certificate",
+          "Heritage Conservation Approval"
+        ]
+      },
+      {
+        "name": "Tourism Promotion",
+        "state": "Goa",
+        "certificates_required": [
+          "Xth Certificate",
+          "Tourism Business License"
+        ]
+      },
+      {
+        "name": "Urban Infrastructure Development",
+        "state": "Delhi",
+        "certificates_required": [
+          "XIIth Certificate",
+          "Urban Planning Approval"
+        ]
+      }
+    ]
+  }
+  
