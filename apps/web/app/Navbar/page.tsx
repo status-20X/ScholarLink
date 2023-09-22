@@ -3,7 +3,6 @@ import React from "react";
 import Scheme from "../Scheme/page";
 import Greviance from "../Greviance/page";
 import Application from "../Application/page";
-import DashBoard from "../DashBoard/page";
 const Navbar = () => {
   return (
     <>
@@ -96,7 +95,7 @@ const Navbar = () => {
           </div>
         </aside>
       <div className="mainPage" style={{marginLeft:'250px'}}>
-        <DashBoard />
+        {/* <Dashboard /> */}
         <Scheme   />
         {/* <CheckStatus/> */}
         <Greviance />
