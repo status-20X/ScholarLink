@@ -1,18 +1,11 @@
 "use client"
 import "tailwindcss/tailwind.css";
 import React , {useEffect , useState} from 'react'
-
+import scemesList from '../schemes.json'
 const Application = () => {
   const [Schemes, SetSchemes] = useState([{name:"empty"}]);
   useEffect(() => {
-    SetSchemes([
-    { name: 'Scheme1'},
-    { name: 'Scheme2'}, 
-    { name: 'Scheme3'}, 
-    { name: 'Scheme4'}, 
-    { name: 'Scheme5'}, 
-    { name: 'Scheme6'}
-  ]);
+    SetSchemes(scemesList.schemes);
   }, []);
   return (
     <>

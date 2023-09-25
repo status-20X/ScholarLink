@@ -1,7 +1,12 @@
+"use client"
 import Link from 'next/link'
 import React from 'react'
-
+import { useRouter } from 'next/navigation'
 export default function Login (){
+  const router = useRouter();
+  const handle = () => {
+    router.push('/Navbar');
+  }
   return (
     <div className="w-screen h-screen flex justify-center bg-[#F0F9F3]">
       <div className="container flex flex-row h-[80%] self-center shadow-lg rounded-md">
@@ -21,11 +26,13 @@ export default function Login (){
             <h1 className="heading self-center text-5xl font-bold text-[#38B593]" style={{
               fontFamily:'Montserrat'
             }}>LOGIN ACCOUNT</h1>
-            <input className="self-center w-[400px] h-[60px] placeholder:p-3" type="email" placeholder="Email"/>
-            <input className="self-center w-[400px] h-[60px] placeholder:p-3" type="password" placeholder="Password"/>
+            <input id='mail' className="self-center w-[400px] h-[60px] placeholder:p-3" type="email" placeholder="Email" required />
+            <input id='pass' className="self-center w-[400px] h-[60px] placeholder:p-3" type="password" placeholder="Password" required/>
             <button className=" w-[200px] self-center bg-[#38B593] hover:bg-[#38D593] text-white font-bold py-2 px-4 rounded-full h-12" style={{
               fontFamily:'Montserrat'
-            }}>
+            }}
+            onClick={handle}
+            >
               LOGIN
             </button>
             <h2 className="self-center">Not a member? <Link href="../Register"><span className="text-blue-700 cursor-pointer">SignUp</span></Link></h2>

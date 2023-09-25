@@ -8,7 +8,10 @@ const Dashboard= () => {
      const [Schemes, SetSchemes] = useState([{name:"empty"}]);
   useEffect(() => {
     SetSchemes([
-    { name: 'Mango Dev'}
+    { name: 'Tushar'},
+    { name: 'Information'},
+    { name: 'Information'},
+    { name: 'Infromation'},
   ]);
   }, []);
   return (
