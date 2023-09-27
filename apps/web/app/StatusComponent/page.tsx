@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "tailwindcss/tailwind.css";
+import "../style/globals.css";
 const state: boolean = false;
 const statusComponent = (element) => {
   const [status1, setStatus1] = useState(`[#F0F4F3]`);

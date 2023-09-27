@@ -1,5 +1,6 @@
 "use client"
 import "tailwindcss/tailwind.css";
+import "../style/globals.css";
 import React , {useEffect , useState} from 'react'
 import scemesList from '../schemes.json'
 const Application = () => {

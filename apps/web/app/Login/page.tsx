@@ -1,11 +1,12 @@
 "use client"
 import Link from 'next/link'
+import "../style/globals.css";
 import React from 'react'
 import { useRouter } from 'next/navigation'
 export default function Login (){
   const router = useRouter();
   const handle = () => {
-    router.push('/Navbar');
+    router.push('/DashBoard');
   }
   return (
     <div className="w-screen h-screen flex justify-center bg-[#F0F9F3]">
