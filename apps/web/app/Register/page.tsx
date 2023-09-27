@@ -1,5 +1,6 @@
 "use client"
 import Link from 'next/link'
+import "../style/globals.css";
 import React from 'react'
 import { useRouter } from 'next/navigation'
 

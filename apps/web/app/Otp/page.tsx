@@ -1,12 +1,13 @@
 "use client"
 import React from 'react'
+import "../style/globals.css";
 import { useRouter } from 'next/navigation'
 
 export default function Otp (){
   const router = useRouter()
   const handleVerify = () => {
     //BACHODI KAR LENA YHA
-    router.push('/Navbar');
+    router.push('/DashBoard');
   }
   const handleSend = () => {
 

@@ -3,6 +3,7 @@ import "tailwindcss/tailwind.css";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import SchemesList from "../schemes.json";
+import "../style/globals.css";
 import SchemeComponent from "../SchemeComponent/page";
 
 const page = () => {
@@ -12,9 +13,11 @@ const page = () => {
   }, []);
   return (
     <>
+    <div className="flex flex-col">
       {schemes.map((element) => {
         return <SchemeComponent element={element} />;
       })}
+      </div>
     </>
   );
 };

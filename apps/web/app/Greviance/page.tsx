@@ -1,9 +1,10 @@
 import "tailwindcss/tailwind.css";
+import "../style/globals.css";
 
 const Grievance = () => {
   return (
     <>
-      <div className="w-full h-screen flex items-center justify-center">
+      <div className="flex items-center justify-center">
         <form className="bg-[rgb(94,213,183)] shadow-md px-8 pt-6 pb-8 mb-6 rounded-2xl text-center">
           <span className="text-2xl text-green-700 font-bold text-center mt-3">
             Grievance Report

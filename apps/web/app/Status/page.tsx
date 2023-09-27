@@ -1,5 +1,6 @@
 "use client";
 import "tailwindcss/tailwind.css";
+import "../style/globals.css";
 import React, { useState, useEffect } from "react";
 const state: boolean = false;
 import status from "../status.json";
@@ -11,11 +12,11 @@ const CheckStatus = () => {
     setAscheme(status.schemes);
   }, []);
   return (
-    <>
+    <div className="flex flex-col">
       {ascheme.map((element) => {
         return <StatusComponent element={element} />;
       })}
-    </>
+    </div>
   );
 };
 ``;
