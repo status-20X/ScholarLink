@@ -1,5 +1,6 @@
 "use client"
 import React from 'react'
+import "../style/globals.css";
 import { useRouter } from 'next/navigation'
 
 export default function Register (){
