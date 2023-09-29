@@ -1,6 +1,6 @@
+"use client"
 import "tailwindcss/tailwind.css";
-import "./globals.css";
-import Login from './Login/page'
+import "./style/globals.css";
 import Register from "./Register/page";
 import Grievance from "./Greviance/page";
 // import Register from './Component/Register/Register'
