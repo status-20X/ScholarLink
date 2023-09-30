@@ -3,7 +3,7 @@ import Link from 'next/link'
 import "../style/globals.css";
 import React from 'react'
 import { useRouter } from 'next/navigation'
-
+import Authprovider from '../component/Authprovider/Authprovider';
 
 export default function Register (){
   const router = useRouter()
@@ -21,7 +21,7 @@ export default function Register (){
             <h2 className="text-center text-blue-100 font-light text-1xl font-montserrat">To keep connected with us please login with your personal info</h2>
           </div>
         </div>
-        <div className="Rcontainer flex justify-center w-full rounded-md rounded-md bg-[#F0F4F3]">
+        <div className="Rcontainer flex justify-center w-full rounded-md rounded-md">
           <div className="form flex flex-col justify-center self-center gap-y-2">
             <h1 className="heading self-center text-5xl font-bold text-[#38B593]" style={{
               fontFamily:'Montserrat'
@@ -37,5 +37,6 @@ export default function Register (){
         </div>
       </div>
     </div>
+    
   )
 }
