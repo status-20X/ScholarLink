@@ -13,7 +13,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-row h-screen">
       {hiddenPages.includes(pathname) ? null : <Navbar />}
-      <div className="overflow-y-auto flex justify-center items-center w-screen h-screen">
+      <div className="overflow-y-auto flex justify-center w-screen">
         {children}
       </div>
         </body>
