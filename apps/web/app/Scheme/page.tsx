@@ -7,9 +7,10 @@ import "../style/globals.css";
 import SchemeComponent from "../SchemeComponent/page";
 
 const page = () => {
-  const [schemes, SetSchemes] = useState([{ name: "empty" }]);
+  const [schemes, SetSchemes] = useState([]);
   useEffect(() => {
     SetSchemes(SchemesList.schemes);
+    console.log(SchemesList.schemes)
   }, []);
   return (
     <>
