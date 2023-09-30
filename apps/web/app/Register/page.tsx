@@ -8,7 +8,6 @@ import Authprovider from '../component/Authprovider/Authprovider';
 export default function Register (){
   const router = useRouter()
   const handleOnclick = () => {
-
     router.push('/Aadhar');
   }
   return (
