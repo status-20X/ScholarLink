@@ -3,7 +3,7 @@ import Link from 'next/link'
 import "../style/globals.css";
 import React from 'react'
 import { useRouter } from 'next/navigation'
-
+import Authprovider from '../component/Authprovider/Authprovider';
 
 export default function Register (){
   const router = useRouter()
@@ -37,5 +37,6 @@ export default function Register (){
         </div>
       </div>
     </div>
+    
   )
 }
