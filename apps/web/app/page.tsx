@@ -2,9 +2,10 @@
 import "tailwindcss/tailwind.css";
 import "./style/globals.css";
 import Register from "./Register/page";
-const Home = () => (
+const Home=()=>(
   <>
     <Register/>
   </>
 );
+
 export default Home;

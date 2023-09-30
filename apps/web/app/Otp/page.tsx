@@ -22,7 +22,7 @@ export default function Otp (){
             <h2 className="text-center text-blue-100 font-light text-1xl font-montserrat">To keep connected with us please login with your Aadhar info</h2>
           </div>
         </div>
-        <div className="Rcontainer flex justify-center w-full rounded-md rounded-md bg-[#F0F4F3]">
+        <div className="Rcontainer flex justify-center w-full rounded-md">
           <div className="form flex flex-col justify-center self-center gap-y-2">
             <h1 className="heading self-center text-5xl font-bold text-[#38B593]" style={{
               fontFamily:'Montserrat'
