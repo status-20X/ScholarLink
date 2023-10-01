@@ -4,13 +4,13 @@ import Image from "next/image";
 import "../style/globals.css";
 import React from "react";
 import { useRouter } from "next/navigation";
-import { signIn, useSession,signOut } from "next-auth/react";
+import { signIn, useSession, signOut } from "next-auth/react";
 export default function Login() {
   const router = useRouter();
   const handle = () => {
     router.push("/DashBoard");
   };
-  const session=useSession();
+  const session = useSession();
   console.log(session);
   // if(session.status==="loading")
   // return <p>Loading......</p>
@@ -18,7 +18,7 @@ export default function Login() {
   // return <button onClick={() => signOut("google")}>Logout</button>
   // if(session.status==="unauthenticated")
   // return <p>user Unauthenticated</p>
-  
+
   return (
     <div className="w-screen h-screen flex justify-center bg-[#F0F9F3]">
       <div className="container flex flex-row h-[80%] self-center shadow-lg rounded-md">
@@ -92,4 +92,4 @@ export default function Login() {
       </div>
     </div>
   );
-            }
+}
