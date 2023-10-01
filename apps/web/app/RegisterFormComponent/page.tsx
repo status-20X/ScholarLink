@@ -1,6 +1,7 @@
 import { ChangeEvent } from "react";
 import Inputbox from "../../component/InputBox/InputBox";
 import Dropdown from "../../component/Dropdown/Dropdown";
+import Link from "next/link";
 
 interface FormData {
   name: string;
@@ -64,6 +65,12 @@ const RegisterForm: React.FC<FormProps> = ({
         <button className="w-[200px] self-center bg-[#38B593] hover:bg-[#38D593] text-white font-bold py-2 px-4 my-3 rounded-full h-12">
           Register
         </button>
+        <h2 className="self-center">
+          Already have an Account?{" "}
+          <Link href="../Login">
+            <span className="text-blue-700 cursor-pointer">Login</span>
+          </Link>
+        </h2>
       </form>
     </>
   );

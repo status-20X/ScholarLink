@@ -23,6 +23,7 @@ const Inputbox: React.FC<InputFieldProps> = ({
       placeholder={placeholder}
       value={value}
       onChange={onChange}
+      required
     />
   );
 };

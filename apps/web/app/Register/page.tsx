@@ -3,7 +3,7 @@ import "../style/globals.css";
 import React, { ChangeEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import Authprovider from "../component/Authprovider/Authprovider";
-import RegisterForm from "../RegisterForm/RegisterForm";
+import RegisterForm from "../RegisterFormComponent/page";
 
 interface FormData {
   name: string;
@@ -17,7 +17,7 @@ export default function Register() {
     name: "",
     email: "",
     password: "",
-    state: "Andhra Pradesh",
+    state: "",
   });
 
   const handleInputChange = (
@@ -45,14 +45,9 @@ export default function Register() {
 
   const handleSignUp = (e: React.FormEvent) => {
     e.preventDefault();
-    if (
-      !formData.name ||
-      !formData.email ||
-      !formData.password ||
-      !formData.state
-    ) {
+    if (!formData.state) {
       console.log(formData);
-      window.alert("Please fill in all required fields");
+      window.alert("Please Select a State");
     } else {
       // TODO: integrate with backend
       console.log(formData);
@@ -75,14 +70,12 @@ export default function Register() {
           </div>
         </div>
         <div className="Rcontainer flex justify-center w-full rounded-md ">
-          <div className="form flex flex-col justify-center self-center gap-y-2">
-            <RegisterForm
-              formData={formData}
-              onInputChange={handleInputChange}
-              onDropdownChange={handleDropdownChange}
-              onSignUp={handleSignUp}
-            />
-          </div>
+          <RegisterForm
+            formData={formData}
+            onInputChange={handleInputChange}
+            onDropdownChange={handleDropdownChange}
+            onSignUp={handleSignUp}
+          />
         </div>
       </div>
     </div>
