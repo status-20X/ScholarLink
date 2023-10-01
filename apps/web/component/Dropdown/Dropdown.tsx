@@ -12,19 +12,17 @@ const Dropdown: React.FC<DropdownProps> = ({
 }) => {
   return (
     <>
-      <div>
-        <select
-          className="w-[400px] h-[60px]"
-          value={selectedState}
-          onChange={onDropdownChange}
-        >
-          {states.map((state) => (
-            <option className="text-black" value={state.name} key={state.name}>
-              {state.name}
-            </option>
-          ))}
-        </select>
-      </div>
+      <select
+        className="self-center w-[400px] h-[60px] px-3"
+        value={selectedState}
+        onChange={onDropdownChange}
+      >
+        {states.map((state) => (
+          <option className="text-black" value={state.name} key={state.name}>
+            {state.name}
+          </option>
+        ))}
+      </select>
     </>
   );
 };

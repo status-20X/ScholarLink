@@ -17,7 +17,7 @@ const Inputbox: React.FC<InputFieldProps> = ({
 }) => {
   return (
     <input
-      className="self-center w-[400px] h-[60px] placeholder:p-3"
+      className="self-center w-[400px] h-[60px] px-3 placeholder:p-3"
       type={type}
       name={name}
       placeholder={placeholder}

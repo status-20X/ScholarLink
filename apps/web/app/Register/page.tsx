@@ -3,7 +3,7 @@ import "../style/globals.css";
 import React, { ChangeEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import Authprovider from "../component/Authprovider/Authprovider";
-import RegisterForm from "../../component/RegisterForm/RegisterForm";
+import RegisterForm from "../RegisterForm/RegisterForm";
 
 interface FormData {
   name: string;

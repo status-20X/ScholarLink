@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
-import Inputbox from "../InputBox/InputBox";
-import Dropdown from "../Dropdown/Dropdown";
+import Inputbox from "../../component/InputBox/InputBox";
+import Dropdown from "../../component/Dropdown/Dropdown";
 
 interface FormData {
   name: string;
