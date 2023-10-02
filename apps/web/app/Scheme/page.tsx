@@ -9,15 +9,15 @@ import SchemeComponent from "../SchemeComponent/page";
 const page = () => {
   const [schemes, SetSchemes] = useState([]);
   useEffect(() => {
-    SetSchemes(SchemesList.schemes);
-    console.log(SchemesList.schemes)
+    SetSchemes(SchemesList);
+    console.log(SchemesList);
   }, []);
   return (
     <>
-    <div className="flex flex-col">
-      {schemes.map((element) => {
-        return <SchemeComponent element={element} />;
-      })}
+      <div className="flex flex-col">
+        {schemes.map((element) => {
+          return <SchemeComponent element={element} />;
+        })}
       </div>
     </>
   );

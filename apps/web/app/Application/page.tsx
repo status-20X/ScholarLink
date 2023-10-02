@@ -1,20 +1,29 @@
 "use client";
 import "tailwindcss/tailwind.css";
 import "../style/globals.css";
-import React, { useEffect, useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import schemesList from "../schemes.json";
 import InputField from "../ApplicationInput/page";
 
-const Application = () => {
-  const [schemes, SetSchemes] = useState(schemesList);
-  const [selectedScheme, setSelectedScheme] = useState(schemesList[0].name);
+interface Scheme {
+  name: string;
+  about: string;
+  state: string;
+  certificates_required: string[];
+}
+
+const Application: React.FC = () => {
+  const [schemes, SetSchemes] = useState<Scheme[]>(schemesList);
+  const [selectedScheme, setSelectedScheme] = useState<string>(
+    schemesList[0].name
+  );
 
   useEffect(() => {
     SetSchemes(schemesList);
     console.log(schemes);
   }, []);
 
-  const handleSchemeChange = (event) => {
+  const handleSchemeChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setSelectedScheme(event.target.value);
   };
 
@@ -46,6 +55,7 @@ const Application = () => {
               </select>
             </label>
           </div>
+
           {selectedSchemeData && (
             <div>
               {selectedSchemeData.certificates_required.map((certificate) => (
