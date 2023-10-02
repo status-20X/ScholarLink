@@ -13,7 +13,7 @@
     "prettier": "^3.0.3",
     "tailwindcss": "^3.3.3",
     "tsconfig": "*",
-    "turbo": "latest"
+    "turbo": "1.10.4"
   },
   "name": "turbo",
   "packageManager": "npm@8.19.4",
