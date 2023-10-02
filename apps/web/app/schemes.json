@@ -1,157 +1,138 @@
-{
-  "schemes": [
-    {
-      "name": "Education Scholarship",
-      "about": "The Education Scholarship scheme in Karnataka is designed to provide financial assistance to students pursuing higher education. It aims to support students in their educational journey by offering scholarships.",
-      "state": "Karnataka",
-      "certificates_required": [
-        "Xth Certificate",
-        "XIIth Certificate",
-        "Undergraduate Degree Certificate"
-      ]
-    },
-    {
-      "name": "Skill Development Program",
-      "about": "The Skill Development Program in Maharashtra focuses on enhancing the skills of individuals, particularly youth, to make them more employable. It offers training and skill development opportunities to help participants gain valuable skills for their careers.",
-      "state": "Maharashtra",
-      "certificates_required": [
-        "Xth Certificate",
-        "XIIth Certificate"
-      ]
-    },
-    {
-      "name": "Women Empowerment Scheme",
-      "about": "The Women Empowerment Scheme in Rajasthan is dedicated to empowering women by providing them with opportunities for higher education and skill development. It aims to create a more inclusive and empowered society by supporting women's education and career growth.",
-      "state": "Rajasthan",
-      "certificates_required": [
-        "XIIth Certificate",
-        "Undergraduate Degree Certificate"
-      ]
-    },
-    {
-      "name": "Agricultural Subsidy",
-      "about": "The Agricultural Subsidy scheme in Punjab is aimed at supporting farmers in the state. It provides financial assistance and subsidies to farmers to help them improve their agricultural practices, purchase equipment, and enhance crop production.",
-      "state": "Punjab",
-      "certificates_required": [
-        "Xth Certificate"
-      ]
-    },
-    {
-      "name": "Healthcare Support Scheme",
-      "about": "The Healthcare Support Scheme in Tamil Nadu aims to provide financial assistance to individuals who require medical treatment or surgeries. It helps alleviate the financial burden on families facing health crises, ensuring access to quality healthcare.",
-      "state": "Tamil Nadu",
-      "certificates_required": [
-        "Medical Diagnosis Certificate",
-        "Income Certificate"
-      ]
-    },
-    {
-      "name": "Entrepreneurship Development Program",
-      "about": "The Entrepreneurship Development Program in Gujarat promotes entrepreneurship and self-employment among the youth. It offers training, mentorship, and financial support to aspiring entrepreneurs to launch and sustain their businesses.",
-      "state": "Gujarat",
-      "certificates_required": [
-        "Business Plan",
-        "Educational Qualification Certificate"
-      ]
-    },
-    {
-      "name": "Elderly Care Assistance",
-      "about": "The Elderly Care Assistance program in Kerala is dedicated to supporting senior citizens. It provides financial aid to help elderly individuals access essential services, such as medical care, in-home assistance, and retirement facilities.",
-      "state": "Kerala",
-      "certificates_required": [
-        "Age Proof",
-        "Income Certificate"
-      ]
-    },
-    {
-      "name": "Environmental Conservation Grant",
-      "about": "The Environmental Conservation Grant in Himachal Pradesh promotes environmental sustainability. It offers grants to organizations and individuals working on projects that protect and preserve the state's natural resources and ecosystems.",
-      "state": "Himachal Pradesh",
-      "certificates_required": [
-        "Project Proposal",
-        "Environmental Impact Assessment"
-      ]
-    },
-    {
-      "name": "Rural Employment Guarantee",
-      "about": "The Rural Employment Guarantee scheme in Bihar provides employment opportunities to rural residents. It focuses on infrastructure development in rural areas and ensures a livelihood for those in need through various labor-intensive projects.",
-      "state": "Bihar",
-      "certificates_required": [
-        "Job Card",
-        "Residence Proof"
-      ]
-    },
-    {
-      "name": "Minority Community Scholarship",
-      "about": "The Minority Community Scholarship in Uttar Pradesh aims to support students from minority communities in pursuing higher education. It provides financial aid to promote educational empowerment among minority youth.",
-      "state": "Uttar Pradesh",
-      "certificates_required": [
-        "Minority Community Certificate",
-        "Income Certificate"
-      ]
-    },
-    {
-      "name": "Startup Incubation Initiative",
-      "about": "The Startup Incubation Initiative in Telangana fosters innovation and entrepreneurship. It offers co-working spaces, mentoring, and funding to startup ventures, helping them grow and succeed in the competitive business landscape.",
-      "state": "Telangana",
-      "certificates_required": [
-        "Business Idea Proposal",
-        "Educational Qualification Certificate"
-      ]
-    },
-    {
-      "name": "Child Nutrition Program",
-      "about": "The Child Nutrition Program in Odisha focuses on the health and well-being of children. It provides nutritional supplements and support to underprivileged children to combat malnutrition and improve their overall development.",
-      "state": "Odisha",
-      "certificates_required": [
-        "Birth Certificate",
-        "Income Certificate"
-      ]
-    },
-    {
-      "name": "Tourism Promotion Grant",
-      "about": "The Tourism Promotion Grant in Goa supports initiatives that promote tourism in the state. It provides financial assistance to organizations and individuals organizing cultural events, festivals, and tourism-related activities.",
-      "state": "Goa",
-      "certificates_required": [
-        "Event Proposal",
-        "Tourism Impact Assessment"
-      ]
-    },
-    {
-      "name": "Disability Inclusion Program",
-      "about": "The Disability Inclusion Program in Madhya Pradesh advocates for the rights and inclusion of individuals with disabilities. It offers support for accessible infrastructure, education, and employment opportunities.",
-      "state": "Madhya Pradesh",
-      "certificates_required": [
-        "Disability Certificate",
-        "Educational Qualification Certificate"
-      ]
-    },
-    {
-      "name": "Clean Energy Incentive",
-      "about": "The Clean Energy Incentive in Andhra Pradesh encourages the adoption of renewable energy sources. It provides subsidies and incentives to individuals and businesses investing in solar, wind, and other clean energy solutions.",
-      "state": "Andhra Pradesh",
-      "certificates_required": [
-        "Energy Project Proposal",
-        "Property Ownership Proof"
-      ]
-    },
-    {
-      "name": "Cultural Heritage Preservation",
-      "about": "The Cultural Heritage Preservation initiative in Assam aims to safeguard the state's cultural heritage. It supports efforts to preserve historical sites, artifacts, and traditional art forms.",
-      "state": "Assam",
-      "certificates_required": [
-        "Heritage Conservation Plan",
-        "Historical Site Ownership Proof"
-      ]
-    },
-    {
-      "name": "Digital Literacy Program",
-      "about": "The Digital Literacy Program in West Bengal promotes digital literacy among citizens. It offers training in digital skills, access to computers, and internet literacy to bridge the digital divide.",
-      "state": "West Bengal",
-      "certificates_required": [
-        "Digital Literacy Training Certificate",
-        "Income Certificate"
-      ]
-    }
-  ]
-}
+[
+  {
+    "name": "Education Scholarship",
+    "about": "The Education Scholarship scheme in Karnataka is designed to provide financial assistance to students pursuing higher education. It aims to support students in their educational journey by offering scholarships.",
+    "state": "Karnataka",
+    "certificates_required": [
+      "Xth Certificate",
+      "XIIth Certificate",
+      "Undergraduate Degree Certificate"
+    ]
+  },
+  {
+    "name": "Skill Development Program",
+    "about": "The Skill Development Program in Maharashtra focuses on enhancing the skills of individuals, particularly youth, to make them more employable. It offers training and skill development opportunities to help participants gain valuable skills for their careers.",
+    "state": "Maharashtra",
+    "certificates_required": ["Xth Certificate", "XIIth Certificate"]
+  },
+  {
+    "name": "Women Empowerment Scheme",
+    "about": "The Women Empowerment Scheme in Rajasthan is dedicated to empowering women by providing them with opportunities for higher education and skill development. It aims to create a more inclusive and empowered society by supporting women's education and career growth.",
+    "state": "Rajasthan",
+    "certificates_required": [
+      "XIIth Certificate",
+      "Undergraduate Degree Certificate"
+    ]
+  },
+  {
+    "name": "Agricultural Subsidy",
+    "about": "The Agricultural Subsidy scheme in Punjab is aimed at supporting farmers in the state. It provides financial assistance and subsidies to farmers to help them improve their agricultural practices, purchase equipment, and enhance crop production.",
+    "state": "Punjab",
+    "certificates_required": ["Xth Certificate"]
+  },
+  {
+    "name": "Healthcare Support Scheme",
+    "about": "The Healthcare Support Scheme in Tamil Nadu aims to provide financial assistance to individuals who require medical treatment or surgeries. It helps alleviate the financial burden on families facing health crises, ensuring access to quality healthcare.",
+    "state": "Tamil Nadu",
+    "certificates_required": [
+      "Medical Diagnosis Certificate",
+      "Income Certificate"
+    ]
+  },
+  {
+    "name": "Entrepreneurship Development Program",
+    "about": "The Entrepreneurship Development Program in Gujarat promotes entrepreneurship and self-employment among the youth. It offers training, mentorship, and financial support to aspiring entrepreneurs to launch and sustain their businesses.",
+    "state": "Gujarat",
+    "certificates_required": [
+      "Business Plan",
+      "Educational Qualification Certificate"
+    ]
+  },
+  {
+    "name": "Elderly Care Assistance",
+    "about": "The Elderly Care Assistance program in Kerala is dedicated to supporting senior citizens. It provides financial aid to help elderly individuals access essential services, such as medical care, in-home assistance, and retirement facilities.",
+    "state": "Kerala",
+    "certificates_required": ["Age Proof", "Income Certificate"]
+  },
+  {
+    "name": "Environmental Conservation Grant",
+    "about": "The Environmental Conservation Grant in Himachal Pradesh promotes environmental sustainability. It offers grants to organizations and individuals working on projects that protect and preserve the state's natural resources and ecosystems.",
+    "state": "Himachal Pradesh",
+    "certificates_required": [
+      "Project Proposal",
+      "Environmental Impact Assessment"
+    ]
+  },
+  {
+    "name": "Rural Employment Guarantee",
+    "about": "The Rural Employment Guarantee scheme in Bihar provides employment opportunities to rural residents. It focuses on infrastructure development in rural areas and ensures a livelihood for those in need through various labor-intensive projects.",
+    "state": "Bihar",
+    "certificates_required": ["Job Card", "Residence Proof"]
+  },
+  {
+    "name": "Minority Community Scholarship",
+    "about": "The Minority Community Scholarship in Uttar Pradesh aims to support students from minority communities in pursuing higher education. It provides financial aid to promote educational empowerment among minority youth.",
+    "state": "Uttar Pradesh",
+    "certificates_required": [
+      "Minority Community Certificate",
+      "Income Certificate"
+    ]
+  },
+  {
+    "name": "Startup Incubation Initiative",
+    "about": "The Startup Incubation Initiative in Telangana fosters innovation and entrepreneurship. It offers co-working spaces, mentoring, and funding to startup ventures, helping them grow and succeed in the competitive business landscape.",
+    "state": "Telangana",
+    "certificates_required": [
+      "Business Idea Proposal",
+      "Educational Qualification Certificate"
+    ]
+  },
+  {
+    "name": "Child Nutrition Program",
+    "about": "The Child Nutrition Program in Odisha focuses on the health and well-being of children. It provides nutritional supplements and support to underprivileged children to combat malnutrition and improve their overall development.",
+    "state": "Odisha",
+    "certificates_required": ["Birth Certificate", "Income Certificate"]
+  },
+  {
+    "name": "Tourism Promotion Grant",
+    "about": "The Tourism Promotion Grant in Goa supports initiatives that promote tourism in the state. It provides financial assistance to organizations and individuals organizing cultural events, festivals, and tourism-related activities.",
+    "state": "Goa",
+    "certificates_required": ["Event Proposal", "Tourism Impact Assessment"]
+  },
+  {
+    "name": "Disability Inclusion Program",
+    "about": "The Disability Inclusion Program in Madhya Pradesh advocates for the rights and inclusion of individuals with disabilities. It offers support for accessible infrastructure, education, and employment opportunities.",
+    "state": "Madhya Pradesh",
+    "certificates_required": [
+      "Disability Certificate",
+      "Educational Qualification Certificate"
+    ]
+  },
+  {
+    "name": "Clean Energy Incentive",
+    "about": "The Clean Energy Incentive in Andhra Pradesh encourages the adoption of renewable energy sources. It provides subsidies and incentives to individuals and businesses investing in solar, wind, and other clean energy solutions.",
+    "state": "Andhra Pradesh",
+    "certificates_required": [
+      "Energy Project Proposal",
+      "Property Ownership Proof"
+    ]
+  },
+  {
+    "name": "Cultural Heritage Preservation",
+    "about": "The Cultural Heritage Preservation initiative in Assam aims to safeguard the state's cultural heritage. It supports efforts to preserve historical sites, artifacts, and traditional art forms.",
+    "state": "Assam",
+    "certificates_required": [
+      "Heritage Conservation Plan",
+      "Historical Site Ownership Proof"
+    ]
+  },
+  {
+    "name": "Digital Literacy Program",
+    "about": "The Digital Literacy Program in West Bengal promotes digital literacy among citizens. It offers training in digital skills, access to computers, and internet literacy to bridge the digital divide.",
+    "state": "West Bengal",
+    "certificates_required": [
+      "Digital Literacy Training Certificate",
+      "Income Certificate"
+    ]
+  }
+]
