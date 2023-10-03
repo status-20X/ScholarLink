@@ -1,0 +1,3 @@
+[submodule "rcw-core"]
+	path = rcw-core
+	url = https://github.com/SamagraX-RCW/devops
