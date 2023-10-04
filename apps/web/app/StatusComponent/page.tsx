@@ -16,32 +16,14 @@ interface StatusComponentProps {
 }
 
 const StatusComponent: React.FC<StatusComponentProps> = ({ scheme }) => {
-  const [status1, setStatus1] = useState("bg-white");
-  const [status2, setStatus2] = useState("bg-white");
-  const [status3, setStatus3] = useState("bg-white");
-  const [progressWidth, setProgressWidth] = useState("w-[33.33%]");
-  const checkmark1 = scheme.status === "applied" ? "✔" : "";
-  const checkmark2 = scheme.status === "Under process" ? "✔" : "";
-  const checkmark3 = scheme.status === "Approval" ? "✔" : "";
+  const statArr = ["applied", "Under process", "Approval"];
+  const [status, setStatus] = useState<number>(
+    statArr.indexOf(scheme.status) + 1
+  );
 
-  useEffect(() => {
-    if (scheme.status === "applied") {
-      setStatus1("bg-black");
-      setStatus2("bg-white");
-      setStatus3("bg-white");
-      setProgressWidth("w-[33.33%]");
-    } else if (scheme.status === "Under process") {
-      setStatus1("bg-black");
-      setStatus2("bg-black");
-      setStatus3("bg-white");
-      setProgressWidth("w-[66.66%]");
-    } else if (scheme.status === "Approval") {
-      setStatus1("bg-black");
-      setStatus2("bg-black");
-      setStatus3("bg-black");
-      setProgressWidth("w-full");
-    }
-  }, [scheme.status]);
+  const pwidth = Math.floor(status / 3) * 100;
+  const progressWidth = `w-[${pwidth}%]`;
+  console.log(progressWidth);
 
   return (
     <div className="rounded-3xl bg-[#06a67e] p-5 m-5">
@@ -60,30 +42,36 @@ const StatusComponent: React.FC<StatusComponentProps> = ({ scheme }) => {
       <div className="flex flex-row mt-10 mx-5 justify-between">
         <div className="relative">
           <div
-            className={`rounded-full h-[50px] w-[50px] ml-3 mb-3 ${status1}`}
+            className={`rounded-full h-[50px] w-[50px] ml-3 mb-3 ${
+              status == 1 ? "bg-black" : "bg-white"
+            }`}
           >
             <span className="text-white text-2xl absolute inset-0 flex items-center justify-center mb-9">
-              {checkmark1}
+              {status == 1 && "✔"}
             </span>
           </div>
           <h1 className="text-white">Submitted</h1>
         </div>
         <div className="relative">
           <div
-            className={`rounded-full h-[50px] w-[50px] ml-3 mb-3 ${status2}`}
+            className={`rounded-full h-[50px] w-[50px] ml-3 mb-3 ${
+              status == 2 ? "bg-black" : "bg-white"
+            }`}
           >
             <span className="text-white text-2xl absolute inset-0 flex items-center justify-center mb-9 mr-3">
-              {checkmark2}
+              {status == 2 && "✔"}
             </span>
           </div>
           <h1 className="text-white">Processing...</h1>
         </div>
         <div className="relative">
           <div
-            className={`rounded-full h-[50px] w-[50px] ml-3 mb-3 ${status3}`}
+            className={`rounded-full h-[50px] w-[50px] ml-3 mb-3 ${
+              status == 3 ? "bg-black" : "bg-white"
+            }`}
           >
             <span className="text-white text-2xl absolute inset-0 flex items-center justify-center mb-9 ml-2">
-              {checkmark3}
+              {status == 3 && "✔"}
             </span>
           </div>
           <h1 className="text-white">Accepted</h1>
