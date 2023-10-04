@@ -2,19 +2,27 @@
 import "tailwindcss/tailwind.css";
 import "../style/globals.css";
 import React, { useState, useEffect } from "react";
-const state: boolean = false;
 import status from "../status.json";
 import StatusComponent from "../StatusComponent/page";
 
+interface SchemeProps {
+  name: string;
+  about: string;
+  state: string;
+  certificates_required: string[];
+  status: string;
+}
+
 const CheckStatus = () => {
-  const [ascheme, setAscheme] = useState([{ name: "empty" , status : "applied" }]);
+  const [schemes, setSchemes] = useState<SchemeProps[]>([]);
   useEffect(() => {
-    setAscheme(status.schemes);
+    setSchemes(status);
   }, []);
+
   return (
     <div className="flex flex-col">
-      {ascheme.map((element) => {
-        return <StatusComponent element={element} />;
+      {schemes.map((scheme) => {
+        return <StatusComponent scheme={scheme} />;
       })}
     </div>
   );
