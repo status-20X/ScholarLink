@@ -58,8 +58,8 @@ const Application: React.FC = () => {
 
           {selectedSchemeData && (
             <div>
-              {selectedSchemeData.certificates_required.map((certificate) => (
-                <InputField key={certificate} certi={certificate} />
+              {selectedSchemeData.certificates_required.map((certificate:string) => (
+                <InputField certi={certificate}/>
               ))}
             </div>
           )}
