@@ -21,9 +21,7 @@ const StatusComponent: React.FC<StatusComponentProps> = ({ scheme }) => {
     statArr.indexOf(scheme.status) + 1
   );
 
-  const pwidth = Math.floor(status / 3) * 100;
-  const progressWidth = `w-[${pwidth}%]`;
-  console.log(progressWidth);
+  const pwidth = Math.floor((status / 3) * 100);
 
   return (
     <div className="rounded-3xl bg-[#06a67e] p-5 m-5">
@@ -77,8 +75,8 @@ const StatusComponent: React.FC<StatusComponentProps> = ({ scheme }) => {
           <h1 className="text-white">Accepted</h1>
         </div>
       </div>
-      <div className="h-2 bg-white mt-4">
-        <div className={`h-full bg-black ${progressWidth}`} />
+      <div className="h-2 bg-white mt-4 w-full">
+        <div className={`h-full bg-black w-[${pwidth}%]`} />
       </div>
     </div>
   );
