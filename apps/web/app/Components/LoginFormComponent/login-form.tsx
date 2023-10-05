@@ -1,24 +1,25 @@
-import { signIn } from "next-auth/react";
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import Inputbox from "../../component/InputBox/InputBox";
 import { useState } from "react";
+import Inputbox from "../InputBox/input-box";
+import { signIn } from "next-auth/react";
 
-interface formData {
+interface FormData {
   email: string;
   password: string;
 }
 
-export default function LoginForm() {
-  const [formData, setFormData] = useState<formData>({
+export default function LoginForm(): JSX.Element {
+  const [formData, setFormData] = useState<FormData>({
     email: "",
     password: "",
   });
 
   const router = useRouter();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     console.log(formData);
     router.push("/DashBoard");
@@ -27,12 +28,22 @@ export default function LoginForm() {
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement>,
     name: string
-  ) => {
+  ): void => {
     const { value } = event.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
+  };
+
+  const signInWithGoogle = () => {
+    signIn("google")
+      .then(() => {
+        router.push("/DashBoard");
+      })
+      .catch((error) => {
+        console.error("Error signing in with Google:", error);
+      });
   };
 
   return (
@@ -54,17 +65,22 @@ export default function LoginForm() {
           type="email"
           placeholder="Email"
           value={formData.email}
-          onChange={(e) => handleInputChange(e, "email")}
+          onChange={(e) => {
+            handleInputChange(e, "email");
+          }}
         />
         <Inputbox
           name="password"
           type="password"
           placeholder="Password"
           value={formData.password}
-          onChange={(e) => handleInputChange(e, "password")}
+          onChange={(e) => {
+            handleInputChange(e, "password");
+          }}
         />
         <button
-          className=" w-[200px] self-center bg-[#38B593] hover:bg-[#38D593] text-white font-bold py-2 px-4 rounded-full h-12"
+          type="submit"
+          className="w-[200px] self-center bg-[#38B593] hover:bg-[#38D593] text-white font-bold py-2 px-4 rounded-full h-12"
           style={{
             fontFamily: "Montserrat",
           }}
@@ -79,8 +95,9 @@ export default function LoginForm() {
         </h2>
         <div className="self-center">
           <button
+            type="button"
             className="px-4 py-2 border flex gap-2 border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150"
-            onClick={() => signIn("google")}
+            onClick={signInWithGoogle}
           >
             <Image
               width={25}

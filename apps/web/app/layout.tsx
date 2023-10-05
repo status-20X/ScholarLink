@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { usePathname } from "next/navigation";
-import Navbar from "./Navbar/page";
-import Authprovider from "./component/Authprovider/Authprovider";
+import Navbar from "./Components/Navbar/navbar";
+import Authprovider from "./Components/Authprovider/authprovider";
 
 export default function RootLayout({ children }) {
   const hiddenPages = ["/Login", "/Register", "/Aadhar", "/Otp", "/"];

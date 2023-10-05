@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from "react";
-import states from "../../app/states.json";
+import states from "../../states.json";
 
 interface DropdownProps {
   selectedState: string;

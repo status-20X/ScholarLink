@@ -4,7 +4,7 @@ import React from "react";
 import "tailwindcss/tailwind.css";
 import "../style/globals.css";
 import Image from "next/image";
-import DashboardComponent from "../DashboardComponent/Page";
+import DashboardComponent from "../Components/DashboardComponent/dashboard-component";
 
 const Dashboard = () => {
   return (
