@@ -1,7 +1,7 @@
 "use client";
 import { ChangeEvent } from "react";
 
-interface InputFieldProps {
+interface InputBoxProps {
   name: string;
   type: string;
   placeholder: string;
@@ -9,7 +9,7 @@ interface InputFieldProps {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Inputbox: React.FC<InputFieldProps> = ({
+const Inputbox: React.FC<InputBoxProps> = ({
   name,
   type,
   placeholder,

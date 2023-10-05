@@ -1,10 +1,11 @@
+"use client";
 import React from "react";
 
 interface InputFieldProps {
-  certi: string;
+  certi:string;
 }
 
-const InputField: React.FC<InputFieldProps> = ({certi}) => {
+const InputField: React.FC<InputFieldProps> = ({ certi }) => {
   return (
     <div className="mb-3">
       <label className="block text-gray-700 text-sm font-bold mb-2">
