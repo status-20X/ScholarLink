@@ -1,19 +1,12 @@
 "use client";
-import Link from "next/link";
-import Image from "next/image";
+// import Link from "next/link";
+// import Image from "next/image";
 import "../style/globals.css";
 import React from "react";
-import { useRouter } from "next/navigation";
-import { signIn, useSession, signOut } from "next-auth/react";
-import LoginForm from "../LoginFormComponent/page";
+import { useSession } from "next-auth/react";
+import LoginForm from "../Components/LoginFormComponent/login-form";
 
 export default function Login() {
-  const router = useRouter();
-
-  const handleSubmit = () => {
-    router.push("/DashBoard");
-  };
-
   const session = useSession();
   console.log(session);
   // if(session.status==="loading")

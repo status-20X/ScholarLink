@@ -3,7 +3,7 @@ import "tailwindcss/tailwind.css";
 import React, { useEffect, useState } from "react";
 import SchemesList from "../schemes.json";
 import "../style/globals.css";
-import SchemeComponent from "../SchemeComponent/page";
+import SchemeComponent from "../Components/SchemeComponent/scheme-component";
 
 interface SchemeProps {
   name: string;
@@ -12,7 +12,7 @@ interface SchemeProps {
   certificates_required: string[];
 }
 
-const page = () => {
+const Page = () => {
   const [schemes, SetSchemes] = useState<SchemeProps[]>([]);
 
   useEffect(() => {
@@ -23,11 +23,11 @@ const page = () => {
     <>
       <div className="flex flex-col">
         {schemes.map((scheme) => {
-          return <SchemeComponent scheme={scheme} />;
+          return <SchemeComponent scheme={scheme} key={scheme.name} />;
         })}
       </div>
     </>
   );
 };
 
-export default page;
+export default Page;

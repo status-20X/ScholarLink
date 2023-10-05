@@ -1,7 +1,7 @@
 import "tailwindcss/tailwind.css";
 import "../style/globals.css";
 
-const Grievance = () => {
+const Grievance: React.FC = () => {
   return (
     <>
       <div className="flex items-center justify-center">
@@ -11,8 +11,12 @@ const Grievance = () => {
           </span>
 
           <div className="mb-3">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
-              Name of Coollege/Institute/University
+            <label
+              htmlFor="tendid"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
+              {" "}
+              Name of College/Institute/University
             </label>
             <input
               className="shadow appearance-none rounded-xl w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
@@ -22,7 +26,11 @@ const Grievance = () => {
             />
           </div>
           <div className="mb-3">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
+            <label
+              htmlFor="twelvedid"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
+              {" "}
               Date of pending Application
             </label>
             <input

@@ -1,11 +1,10 @@
-"use client"
+import React from "react";
 import "tailwindcss/tailwind.css";
 import "./style/globals.css";
 import Register from "./Register/page";
-const Home=()=>(
-  <>
-    <Register/>
-  </>
-);
+
+function Home(): React.ReactElement {
+  return <Register />;
+}
 
 export default Home;

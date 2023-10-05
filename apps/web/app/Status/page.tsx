@@ -3,7 +3,7 @@ import "tailwindcss/tailwind.css";
 import "../style/globals.css";
 import React, { useState, useEffect } from "react";
 import status from "../status.json";
-import StatusComponent from "../StatusComponent/page";
+import StatusComponent from "../Components/StatusComponent/status-component";
 
 interface SchemeProps {
   name: string;
@@ -22,7 +22,7 @@ const CheckStatus = () => {
   return (
     <div className="flex flex-col">
       {schemes.map((scheme) => {
-        return <StatusComponent scheme={scheme} />;
+        return <StatusComponent scheme={scheme} key={scheme.name} />;
       })}
     </div>
   );
