@@ -25,7 +25,8 @@ const Page = () => {
     <>
       <div className="flex flex-col">
         {schemes.map((scheme) => {
-          return <SchemeComponent scheme={scheme} key={scheme.name} />;
+          if (scheme.state == "Rajasthan")
+            return <SchemeComponent scheme={scheme} key={scheme.name} />;
         })}
       </div>
     </>
