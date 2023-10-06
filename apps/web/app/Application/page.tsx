@@ -4,6 +4,7 @@ import "../style/globals.css";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import schemesList from "../schemes.json";
 import ApplicationInput from "../Components/ApplicationInput/application-input";
+import { useSearchParams } from "next/navigation";
 
 interface Scheme {
   name: string;
@@ -13,14 +14,19 @@ interface Scheme {
 }
 
 const Application: React.FC = () => {
-  const [schemes, SetSchemes] = useState<Scheme[]>(schemesList);
+  const [schemes, setSchemes] = useState<Scheme[]>(schemesList);
   const [selectedScheme, setSelectedScheme] = useState<string>(
     schemesList[0].name
   );
 
+  const searchParams = useSearchParams();
+
   useEffect(() => {
-    SetSchemes(schemesList);
-    console.log(schemes);
+    setSchemes(schemesList);
+    const scheme_name = searchParams.get("scheme_name");
+    if (scheme_name) {
+      setSelectedScheme(scheme_name);
+    }
   }, []);
 
   const handleSchemeChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -30,6 +36,10 @@ const Application: React.FC = () => {
   const selectedSchemeData = schemes.find(
     (scheme) => scheme.name === selectedScheme
   );
+
+  const handleSubmit = () => {
+    alert("form Submittited Successfully");
+  };
 
   return (
     <>
@@ -68,6 +78,7 @@ const Application: React.FC = () => {
             <button
               className="bg-[rgb(6,166,126)] hover:bg-green-700 text-white font-bold py-2 px-4 rounded-2xl  focus:outline-none focus:shadow-outline"
               type="button"
+              onClick={handleSubmit}
             >
               Verify and submit
             </button>
