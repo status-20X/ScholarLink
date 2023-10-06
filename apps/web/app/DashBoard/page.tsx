@@ -21,7 +21,7 @@ const Dashboard = () => {
           />
         </div>
         <div className="rounded-xl bg-black w-[60%] text-white mt-3 text-center text-3xl">
-          Arjit Kedia
+          Sooraj Kashyap
         </div>
         <DashboardComponent scheme="scheme" status="pending" />
         <DashboardComponent scheme="scheme" status="resolved" />

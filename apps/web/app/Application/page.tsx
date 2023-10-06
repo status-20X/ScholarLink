@@ -37,6 +37,10 @@ const Application: React.FC = () => {
     (scheme) => scheme.name === selectedScheme
   );
 
+  const handleSubmit = () => {
+    alert("form Submittited Successfully");
+  };
+
   return (
     <>
       <div className="w-full h-screen flex items-center justify-center">
@@ -74,6 +78,7 @@ const Application: React.FC = () => {
             <button
               className="bg-[rgb(6,166,126)] hover:bg-green-700 text-white font-bold py-2 px-4 rounded-2xl  focus:outline-none focus:shadow-outline"
               type="button"
+              onClick={handleSubmit}
             >
               Verify and submit
             </button>
