@@ -21,7 +21,7 @@ const StatusComponent: React.FC<StatusComponentProps> = ({ scheme }) => {
   const statusIndex = statArr.indexOf(scheme.status) + 1;
 
   return (
-    <div className="rounded-3xl bg-[#06a67e] p-5 m-5" role="button">
+    <div className="rounded-3xl bg-[#06a67e] p-5 m-5 flex flex-col" role="button">
       <h5 className="mb-2 text-2xl font-normal tracking-tight text-gray-900 dark:text-black">
         {scheme.name}
       </h5>
@@ -33,23 +33,23 @@ const StatusComponent: React.FC<StatusComponentProps> = ({ scheme }) => {
       </p>
       <button
         type="button"
-        className="h-[30px] w-[100px] bg-red-600 rounded-md ml-10 mt-2 pl-2 hover:h-[35px] hover:w-[125px] hover:mt-1 hover:ml-8"
+        className=" place-items-end h-[30px] w-[100px] bg-red-600 rounded-md mt-2 hover:bg-red-800"
       >
         Withdraw
       </button>
       <div className="flex flex-row mt-10 mx-5 justify-between">
         {statArr.map((_, index) => (
-          <div className="relative" key={index}>
+          <div className="flex flex-col w-[120px] justify-center items-center" key={index}>
             <div
-              className={`rounded-full h-[50px] w-[50px] ml-3 mb-3 ${
+              className={`rounded-full h-[50px] w-[50px] flex flex-col justify-center items-center ${
                 statusIndex === index + 1 ? "bg-black" : "bg-white"
               }`}
             >
-              <span className="text-white text-2xl absolute inset-0 flex items-center justify-center mb-9">
+              <span className="text-green-800 text-2xl mb-1">
                 {statusIndex === index + 1 && "✔"}
               </span>
             </div>
-            <h1 className="text-white">{_}</h1>
+            <h1 className="text-white text-center">{_}</h1>
           </div>
         ))}
       </div>
