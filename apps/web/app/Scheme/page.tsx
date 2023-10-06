@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import SchemesList from "../schemes.json";
 import "../style/globals.css";
 import SchemeComponent from "../Components/SchemeComponent/scheme-component";
+import { useRouter } from "next/navigation";
 
 interface SchemeProps {
   name: string;
@@ -13,6 +14,7 @@ interface SchemeProps {
 }
 
 const Page = () => {
+  const router = useRouter();
   const [schemes, SetSchemes] = useState<SchemeProps[]>([]);
 
   useEffect(() => {

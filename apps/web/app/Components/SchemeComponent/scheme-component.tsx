@@ -1,6 +1,7 @@
 "use client";
 import "tailwindcss/tailwind.css";
 import "../../style/globals.css";
+import { useRouter } from "next/navigation";
 
 interface SchemeProps {
   name: string;
@@ -14,8 +15,10 @@ interface SchemeComponentProps {
 }
 
 const SchemeComponent: React.FC<SchemeComponentProps> = ({ scheme }) => {
+  const router = useRouter();
+
   const handleClick = () => {
-    alert("Applied");
+    router.push("/Application");
   };
 
   return (
