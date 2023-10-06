@@ -2,8 +2,7 @@
 import "../style/globals.css";
 import React, { ChangeEvent, useState } from "react";
 import { useRouter } from "next/navigation";
-import Authprovider from "../component/Authprovider/Authprovider";
-import RegisterForm from "../RegisterFormComponent/page";
+import RegisterForm from "../Components/RegisterFormComponent/register-form";
 
 interface FormData {
   name: string;
@@ -25,8 +24,8 @@ export default function Register() {
     name: string
   ) => {
     const { value } = event.target;
-    setFormData((formData) => ({
-      ...formData,
+    setFormData((prevFormData) => ({
+      ...prevFormData,
       [name]: value,
     }));
   };
@@ -35,8 +34,8 @@ export default function Register() {
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
     const { value } = event.target;
-    setFormData((formData) => ({
-      ...formData,
+    setFormData((prevFormData) => ({
+      ...prevFormData,
       state: value,
     }));
   };

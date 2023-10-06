@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import "tailwindcss/tailwind.css";
-import "../style/globals.css";
+import "../../style/globals.css";
 import React from "react";
 const Navbar = () => {
   return (
@@ -26,7 +26,8 @@ const Navbar = () => {
               <Link
                 href="/DashBoard"
                 className="flex pl-12 items-center p-2 text-center  text-gray-900 rounded-lg dark:text-black hover:scale-110 hover:shadow-lg dark:hover:shadow-black/30 group underline"
-              ><h1>Dashboard</h1>
+              >
+                <h1>Dashboard</h1>
               </Link>
             </li>
 
@@ -35,7 +36,7 @@ const Navbar = () => {
                 href="/Scheme"
                 className="flex pl-12 items-center p-2 text-center  text-gray-900 rounded-lg dark:text-black hover:scale-110 hover:shadow-lg dark:hover:shadow-black/30 group underline"
               >
-                  Schemes
+                Schemes
               </Link>
             </li>
             <li>
@@ -43,7 +44,7 @@ const Navbar = () => {
                 href="/Status"
                 className="flex pl-12 items-center p-2 text-center  text-gray-900 rounded-lg dark:text-black hover:scale-110 hover:shadow-lg dark:hover:shadow-black/30 group underline"
               >
-                  Check Status
+                Check Status
               </Link>
             </li>
             <li>
@@ -51,7 +52,7 @@ const Navbar = () => {
                 href="/Application"
                 className="flex pl-12 items-center p-2 text-center  text-gray-900 rounded-lg dark:text-black hover:scale-110 hover:shadow-lg dark:hover:shadow-black/30 group underline"
               >
-                  New Application
+                New Application
               </Link>
             </li>
             <li>
@@ -59,7 +60,7 @@ const Navbar = () => {
                 href="/Greviance"
                 className="flex pl-12 items-center p-2 text-center  text-gray-900 rounded-lg dark:text-black hover:scale-110 hover:shadow-lg dark:hover:shadow-black/30 group underline"
               >
-                  Grievance
+                Grievance
               </Link>
             </li>
             <li>
@@ -67,14 +68,14 @@ const Navbar = () => {
                 href="/Login"
                 className="flex pl-12 items-center p-2 text-center  text-gray-900 rounded-lg dark:text-black hover:scale-110 hover:shadow-lg dark:hover:shadow-black/30 group underline"
               >
-                  Sign Out
+                Sign Out
               </Link>
             </li>
           </ul>
         </div>
       </aside>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

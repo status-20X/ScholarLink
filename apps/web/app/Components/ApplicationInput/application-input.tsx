@@ -1,11 +1,6 @@
-"use client";
 import React from "react";
 
-interface InputFieldProps {
-  certi:string;
-}
-
-const InputField: React.FC<InputFieldProps> = ({ certi }) => {
+const ApplicationInput: React.FC<{ certi: string }> = ({ certi }) => {
   return (
     <div className="mb-3">
       <label className="block text-gray-700 text-sm font-bold mb-2">
@@ -21,4 +16,4 @@ const InputField: React.FC<InputFieldProps> = ({ certi }) => {
   );
 };
 
-export default InputField;
+export default ApplicationInput;

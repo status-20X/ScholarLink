@@ -7,7 +7,6 @@ import emailjs from "@emailjs/browser";
 export default function Register() {
   const router = useRouter();
   const [aadhar, setAadhar] = useState("");
-  const crypto = require("crypto");
 
   const handleAadharChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setAadhar(event.target.value);
@@ -19,15 +18,16 @@ export default function Register() {
     return String(Math.floor(Math.random() * (max - min + 1)) + min);
   }
 
-  async function handleOnclick(e: React.FormEvent<HTMLButtonElement>) {
+  function handleOnclick(e: React.FormEvent<HTMLButtonElement>) {
     e.preventDefault();
     if (aadhar.length === 12) {
-      try {
-        await sendEmail();
-        router.push("/Otp");
-      } catch (error) {
-        console.error("Error sending email:", error);
-      }
+      sendEmail()
+        .then(() => {
+          router.push("/Otp");
+        })
+        .catch((error) => {
+          console.error("Error sending email:", error);
+        });
     } else {
       alert("Aadhaar number must be 12 digits long.");
     }
@@ -39,19 +39,21 @@ export default function Register() {
     OTP: otp,
   };
 
-  const sendEmail = async () => {
+  const sendEmail = () => {
     console.log(templateParams);
-    try {
-      emailjs.send(
+    return emailjs
+      .send(
         "service_5lzk86j",
         "template_15v00km",
         templateParams,
         "LQgJoiy1g4e-Pe70y"
-      );
-      console.log("Email sent successfully.");
-    } catch (error) {
-      console.error("Error sending email:", error);
-    }
+      )
+      .then(() => {
+        console.log("Email sent successfully.");
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
   };
 
   return (
@@ -62,7 +64,6 @@ export default function Register() {
             <h1 className="text-center text-blue-100 font-black text-3xl font-montserrat py-4">
               Verify Aadhar Now!!
             </h1>
-
             <h2 className="text-center text-blue-100 font-light text-1xl font-montserrat">
               To keep connected with us please login with your Aadhar info
             </h2>

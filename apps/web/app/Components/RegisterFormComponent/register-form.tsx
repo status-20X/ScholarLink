@@ -1,28 +1,33 @@
 import { ChangeEvent } from "react";
-import Inputbox from "../../component/InputBox/InputBox";
-import Dropdown from "../../component/Dropdown/Dropdown";
+import Inputbox from "../InputBox/input-box";
+import Dropdown from "../Dropdown/dropdown";
 import Link from "next/link";
 
-interface FormData {
-  name: string;
-  state: string;
-  email: string;
-  password: string;
-}
+// interface FormData {
+//   name: string;
+//   state: string;
+//   email: string;
+//   password: string;
+// }
 
-interface FormProps {
-  formData: FormData;
+// interface FormProps {
+//   formData: FormData;
+//   onInputChange: (event: ChangeEvent<HTMLInputElement>, name: string) => void;
+//   onDropdownChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+//   onSignUp: (e: React.FormEvent) => void;
+// }
+
+const RegisterForm: React.FC<{
+  formData: {
+    name: string;
+    state: string;
+    email: string;
+    password: string;
+  };
   onInputChange: (event: ChangeEvent<HTMLInputElement>, name: string) => void;
   onDropdownChange: (event: ChangeEvent<HTMLSelectElement>) => void;
   onSignUp: (e: React.FormEvent) => void;
-}
-
-const RegisterForm: React.FC<FormProps> = ({
-  formData,
-  onInputChange,
-  onSignUp,
-  onDropdownChange,
-}) => {
+}> = ({ formData, onInputChange, onSignUp, onDropdownChange }) => {
   return (
     <>
       <form
@@ -42,21 +47,27 @@ const RegisterForm: React.FC<FormProps> = ({
           type="text"
           placeholder="Name"
           value={formData.name}
-          onChange={(event) => onInputChange(event, "name")}
+          onChange={(event) => {
+            onInputChange(event, "name");
+          }}
         />
         <Inputbox
           name="email"
           type="email"
           placeholder="Email"
           value={formData.email}
-          onChange={(event) => onInputChange(event, "email")}
+          onChange={(event) => {
+            onInputChange(event, "email");
+          }}
         />
         <Inputbox
           name="password"
           type="password"
           placeholder="Password"
           value={formData.password}
-          onChange={(event) => onInputChange(event, "password")}
+          onChange={(event) => {
+            onInputChange(event, "password");
+          }}
         />
         <Dropdown
           selectedState={formData.state}

@@ -3,7 +3,7 @@ import "tailwindcss/tailwind.css";
 import "../style/globals.css";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import schemesList from "../schemes.json";
-import InputField from "../ApplicationInput/page";
+import ApplicationInput from "../Components/ApplicationInput/application-input";
 
 interface Scheme {
   name: string;
@@ -36,7 +36,7 @@ const Application: React.FC = () => {
       <div className="w-full h-screen flex items-center justify-center">
         <form className="bg-[rgb(94,213,183)] shadow-md px-8 pt-6 pb-8 mb-4 rounded-2xl">
           <span className="text-2xl text-green-700 font-bold text-ellipsis overflow-hidden ">
-            Let's get you started with your application
+            Let&apos;s get you started with your application
           </span>
           <div className="mb-3 mt-5">
             <label className="block text-gray-700 text-sm font-bold mb-2">
@@ -58,8 +58,8 @@ const Application: React.FC = () => {
 
           {selectedSchemeData && (
             <div>
-              {selectedSchemeData.certificates_required.map((certificate:string) => (
-                <InputField key={certificate} certi={certificate}/>
+              {selectedSchemeData.certificates_required.map((certificate) => (
+                <ApplicationInput key={certificate} certi={certificate} />
               ))}
             </div>
           )}
