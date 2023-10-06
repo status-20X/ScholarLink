@@ -4,6 +4,7 @@ import "../style/globals.css";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import schemesList from "../schemes.json";
 import ApplicationInput from "../Components/ApplicationInput/application-input";
+import { useSearchParams } from "next/navigation";
 
 interface Scheme {
   name: string;
@@ -13,14 +14,19 @@ interface Scheme {
 }
 
 const Application: React.FC = () => {
-  const [schemes, SetSchemes] = useState<Scheme[]>(schemesList);
+  const [schemes, setSchemes] = useState<Scheme[]>(schemesList);
   const [selectedScheme, setSelectedScheme] = useState<string>(
     schemesList[0].name
   );
 
+  const searchParams = useSearchParams();
+
   useEffect(() => {
-    SetSchemes(schemesList);
-    console.log(schemes);
+    setSchemes(schemesList);
+    const scheme_name = searchParams.get("scheme_name");
+    if (scheme_name) {
+      setSelectedScheme(scheme_name);
+    }
   }, []);
 
   const handleSchemeChange = (event: ChangeEvent<HTMLSelectElement>) => {

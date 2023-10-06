@@ -18,7 +18,10 @@ const SchemeComponent: React.FC<SchemeComponentProps> = ({ scheme }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push("/Application");
+    const queryParams = new URLSearchParams();
+    queryParams.append("scheme_name", scheme.name);
+
+    router.push(`/Application?${queryParams.toString()}`);
   };
 
   return (
